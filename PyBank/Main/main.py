@@ -7,7 +7,7 @@ import csv
 dates = []
 profits_losses = []
 
-with open('Resources/budget_data.csv', 'r') as file:
+with open('../Resources/budget_data.csv', 'r') as file:
     csvreader = csv.reader(file)
     next(csvreader)  # Skip the header row
     for row in csvreader:
