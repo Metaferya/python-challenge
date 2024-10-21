@@ -7,7 +7,7 @@ candidates = {}
 candidates_votes = {}
 
 # Read data from the CSV file
-with open('../Resources/election_data.csv', 'r') as file:
+with open('Resources/election_data.csv', 'r') as file:
     csvreader = csv.reader(file)
     next(csvreader)  # Skip the header row
     for row in csvreader:
@@ -39,7 +39,8 @@ print(f"Winner: {winner}")
 print("-------------------------")
 
 # Export the results to a text file
-with open('election_results.txt', 'w') as f:
+file_path = os.path.join('analysis', 'financial_analysis.txt')
+with open(file_path, 'w') as f:
     f.write("Election Results\n")
     f.write("-------------------------\n")
     f.write(f"Total Votes: {total_votes}\n")

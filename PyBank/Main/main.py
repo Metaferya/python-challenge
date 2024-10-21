@@ -7,7 +7,7 @@ import csv
 dates = []
 profits_losses = []
 
-with open('../Resources/budget_data.csv', 'r') as file:
+with open('Resources/budget_data.csv', 'r') as file:
     csvreader = csv.reader(file)
     next(csvreader)  # Skip the header row
     for row in csvreader:
@@ -42,7 +42,8 @@ print(f"Greatest Increase in Profits: {greatest_increase_date} (${greatest_incre
 print(f"Greatest Decrease in Profits: {greatest_decrease_date} (${greatest_decrease_amount})")
 
 # Export the results to a text file
-with open('financial_analysis.txt', 'w') as f:
+file_path = os.path.join('analysis', 'financial_analysis.txt')
+with open(file_path, 'w') as f:
     f.write("Financial Analysis\n")
     f.write("----------------------------\n")
     f.write(f"Total Months: {total_months}\n")
