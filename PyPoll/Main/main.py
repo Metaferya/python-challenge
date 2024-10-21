@@ -39,7 +39,7 @@ print(f"Winner: {winner}")
 print("-------------------------")
 
 # Export the results to a text file
-file_path = os.path.join('analysis', 'financial_analysis.txt')
+file_path = os.path.join('analysis', 'Election_Results.txt')
 with open(file_path, 'w') as f:
     f.write("Election Results\n")
     f.write("-------------------------\n")
